@@ -88,8 +88,8 @@ module.exports = function(grunt) {
 
             var defaults = folderOptionsFile["defaults"];
             var variations = folderOptionsFile["variations"];
-            var color = folderOptionsFile["defaultColor"];
-
+            var color = options.defaultColor ? options.defaultColor : folderOptionsFile["defaultColor"];
+            
             // colorize after setting defaults
             if (color) {
                 changesParams["defaultColor"] = color;
